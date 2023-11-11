@@ -37,10 +37,11 @@ const handleNews = async (newsId) => {
                       <figure><img src="${categoryId.image_url}" alt="" /></figure>
                       <div class="card-body">
                           <h2 class="card-title">${categoryId.author.name}</h2>
-                          <p>If a dog chews shoes whose shoes does he choose?</p>
-                          <div class="card-actions justify-end">
-                              <button class="btn btn-primary">Buy Now</button>
-                          </div>
+                           <div class="flex">
+                             <p>${categoryId.details.slice(0, 100)}</p>
+                             <p class="badge badge-secondary p-5">${categoryId.rating.badge}</p>
+                           </div>
+                           <p>Total view : ${categoryId.total_view}</p>
                       </div>
                   </div>
       `;
